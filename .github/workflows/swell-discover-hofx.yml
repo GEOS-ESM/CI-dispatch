@@ -1,0 +1,17 @@
+# Discover Nightly
+
+name: swell-discover-hofx
+
+on:
+  workflow_dispatch
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  run-swell-discover-hofx:
+    uses: GEOS-ESM/CI-workflows/.github/workflows/discover-validate.yml@main
+    with:
+      accessor: ${{ github.event.actor }}
+      project: swell
