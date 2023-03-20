@@ -10,8 +10,8 @@ defaults:
     shell: bash
 
 jobs:
-  run-swell-discover-hofx:
+  validate-workflow:
     uses: GEOS-ESM/CI-workflows/.github/workflows/discover-validate.yml@main
     with:
-      accessor: ${{ github.event.actor }}
+      accessor: ${{ github.triggering_actor }}
       project: swell
