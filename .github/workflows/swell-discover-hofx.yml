@@ -2,8 +2,7 @@
 
 name: swell-discover-hofx
 
-on:
-  workflow_dispatch
+on: workflow_dispatch
 
 defaults:
   run:
