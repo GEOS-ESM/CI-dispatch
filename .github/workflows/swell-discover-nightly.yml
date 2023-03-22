@@ -1,0 +1,13 @@
+# SWELL Discover Nightly
+
+name: swell-discover-nightly
+
+on: workflow_dispatch
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  swell-discover-nightly:
+    uses: GEOS-ESM/CI-workflows/.github/workflows/swell-discover-nightly-demo.yml@main
