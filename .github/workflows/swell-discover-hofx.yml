@@ -21,14 +21,3 @@ jobs:
           
       - name: set-env
         run: echo "CI_TEST=yay" >> $GITHUB_ENV
-        
-  test-environment:
-  
-    runs-on: ubuntu-latest
-    
-    steps:
-    
-      - name: check-vars
-        run: |
-          echo ${{ vars.CI_ROOT }}
-          echo $CI_TEST
