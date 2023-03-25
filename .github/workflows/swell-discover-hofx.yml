@@ -18,5 +18,8 @@ jobs:
   test-environment:
   
     runs-on: ubuntu-latest
+    
     steps:
-      run: echo ${{ vars.CI_ROOT }}
+    
+      - name: check-vars
+        run: echo ${{ vars.CI_ROOT }}
