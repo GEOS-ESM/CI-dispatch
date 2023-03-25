@@ -23,9 +23,5 @@ jobs:
       - name: set-env
         run: echo "CI_TEST=yay" >> $GITHUB_ENV
 
-  get-environment:
-    runs-on: ubuntu-latest
-    steps:
-    
-      - name: get_var
+      - name: get-env
         run: echo $CI_TEST
