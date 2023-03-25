@@ -14,3 +14,9 @@ jobs:
     with:
       accessor: ${{ github.triggering_actor }}
       project: swell
+
+  test-environment:
+  
+    runs-on: ubuntu-latest
+    steps:
+      run: echo ${{ vars.CI_ROOT }}
