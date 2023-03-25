@@ -10,11 +10,18 @@ defaults:
 
 jobs:
   validate-workflow:
-    uses: GEOS-ESM/CI-workflows/.github/workflows/discover-validate.yml@main
-    with:
-      accessor: ${{ github.triggering_actor }}
-      project: swell
-
+  
+    runs-on: ubuntu-latest
+    steps:
+      - name: validate
+        uses: GEOS-ESM/CI-workflows/.github/workflows/discover-validate.yml@main
+        with:
+          accessor: ${{ github.triggering_actor }}
+          project: swell
+          
+      - name: set-env
+        run: echo "CI_TEST=yay" >> $GITHUB_ENV
+        
   test-environment:
   
     runs-on: ubuntu-latest
@@ -22,4 +29,6 @@ jobs:
     steps:
     
       - name: check-vars
-        run: echo ${{ vars.CI_ROOT }}
+        run: |
+          echo ${{ vars.CI_ROOT }}
+          echo $CI_TEST
