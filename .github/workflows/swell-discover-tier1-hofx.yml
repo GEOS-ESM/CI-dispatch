@@ -9,5 +9,5 @@ defaults:
     shell: bash
 
 jobs:
-  swell-discover-nightly:
+  swell-discover-tier1-hofx:
     uses: GEOS-ESM/CI-workflows/.github/workflows/swell-discover-tier1-hofx.yml@main
