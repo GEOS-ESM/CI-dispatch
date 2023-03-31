@@ -4,10 +4,6 @@ name: swell-discover-nightly
 
 on:
   workflow_dispatch:
-  
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 0 * * *'
 
 defaults:
   run:
@@ -15,4 +11,4 @@ defaults:
 
 jobs:
   swell-discover-nightly:
-    uses: GEOS-ESM/CI-workflows/.github/workflows/swell-discover-nightly-test.yml@main
+    uses: GEOS-ESM/CI-workflows/.github/workflows/swell-discover-nightly.yml@main
